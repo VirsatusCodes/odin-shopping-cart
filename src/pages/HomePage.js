@@ -1,6 +1,5 @@
-import React, {useState} from 'react';
+const HomePage = () => {
 
-function HomePage({productList}) {
   return (
     <div className='home-page-info'>
         <h1 className='header'>Welcome to our store!</h1>
