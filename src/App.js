@@ -1,10 +1,11 @@
-import logo from './logo.svg';
 import './App.css';
+import productList from './products/productList.js';
+console.log(productList)
 
 function App() {
   return (
     <div>
-      eyo
+        {<img src={productList.item1.img} alt = 'deoderant'/>}
     </div>
   );
 }
