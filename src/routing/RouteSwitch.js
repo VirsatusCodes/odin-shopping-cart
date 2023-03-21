@@ -3,6 +3,7 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import productList from '../products/productList.js';
 import '../styling/generalStyling.css'
 import HomePage from '../pages/HomePage';
+import CataloguePage from '../pages/CataloguePage'
 import Nav from '../components/NavBar'
 
 const RouteSwitch = () => {
@@ -10,8 +11,8 @@ const RouteSwitch = () => {
         <BrowserRouter>
                 <Nav />
             <Routes>
-                {/* routes is what checks for exact matches but is still required */}
-                <Route path='/' element={<HomePage productList = {productList}/>} />
+                <Route path='/' element={<HomePage />} />
+                <Route path='/Catalogue' element={<CataloguePage productList = {productList}/>} />
             </Routes>
         </BrowserRouter>
     )

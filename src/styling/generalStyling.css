@@ -38,3 +38,29 @@ nav{
     font-size: 40px;
     line-height: 1.5;
 }
+
+img{
+    max-width: 500px;
+    max-height: 350px;
+}
+
+.catalogue-of-items{
+    display: flex;
+    justify-content: space-between;
+}
+
+li{
+    list-style-type: none;
+}
+
+.item-description{
+    display: flex;
+    justify-content: center;
+    margin: 5px 0px 5px 0px;
+    text-align: center
+}
+
+.catalogue-item > p {
+    color: black;
+    font-size: 20px;
+}
