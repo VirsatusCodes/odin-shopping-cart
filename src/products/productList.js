@@ -5,6 +5,11 @@ import {deoderant,
 
 import uniqid from 'uniqid'
 
+/* in larger lists or in general
+alternate format could be the item name or id
+is the title of the object and i could be able to access
+it easier */
+
 const productList = {
   item1 : {
     name: 'Deoderant',
