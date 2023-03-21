@@ -14,14 +14,14 @@ const ItemPage = ({productList}) => {
     const productChooser = () => {
         for (const item in productList) {
             if(productList[item].id === itemId){
-                product = productList[item]
+                return productList[item]
             }
         }
     }; 
 
     const itemId = itemIdFinder();
     const product = productChooser();
-    /* make use of UseEffect here potentially? */
+    /* make use of UseEffect here potentially?*/
 
     return (
         <div>
