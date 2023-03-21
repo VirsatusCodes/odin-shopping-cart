@@ -1,5 +1,6 @@
 import CatalogueItems from "../components/CatalogueItems"
 import {Link} from 'react-router-dom';
+import React from 'react';
 
 const CataloguePage = ({productList}) => {
 
@@ -12,6 +13,8 @@ const CataloguePage = ({productList}) => {
             itemArray.push(productList[item])
             }
     })();
+
+    /* alter the above code into useEffect */
     console.log([productList])
     console.log(itemArray)
 
@@ -21,10 +24,11 @@ const CataloguePage = ({productList}) => {
         <div>
             <ul className="catalogue-of-items">
                 {itemArray.map((item) => (
-                <Link to={`/Catalogue/Item/${item.id}`}>
                 <li key={item.id}>
-                <CatalogueItems item = {item}/></li>
+                <Link to={`/Catalogue/Item/${item.id}`}>
+                <CatalogueItems item = {item}/>
                 </Link>
+                </li>
                 ))}
             </ul>
         </div>
