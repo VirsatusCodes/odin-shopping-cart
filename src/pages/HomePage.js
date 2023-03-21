@@ -1,5 +1,5 @@
 const HomePage = () => {
-
+  
   return (
     <div className='home-page-info'>
         <h1 className='header'>Welcome to our store!</h1>
