@@ -10,21 +10,19 @@ const ItemPage = ({productList}) => {
         const regEx = /(\w+)/g
         return pageUrl.pathname.match(regEx)[2]
       }
-    const itemId = itemIdFinder();
-    let product;
 
-      (function arrayFiller(){
+    const productChooser = () => {
         for (const item in productList) {
-            console.log(item)
-            console.log(itemId, productList[item].id)
             if(productList[item].id === itemId){
                 product = productList[item]
-                console.log('test')
             }
-            }
-    })(); 
-    
-    console.log(product)
+        }
+    }; 
+
+    const itemId = itemIdFinder();
+    const product = productChooser();
+    /* make use of UseEffect here potentially? */
+
     return (
         <div>
             {<Items item = {product}/>}
