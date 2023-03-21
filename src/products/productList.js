@@ -11,28 +11,28 @@ const productList = {
     price: 1.25,
     quantity: 1,
     img: deoderant,
-    id: uniqid(),
+    id: 123,
   },
   item2 : {
     name: 'Couriers',
     price: 5,
     quantity: 1,
     img: couriers,
-    id: uniqid(),
+    id: 1234,
   },
   item3 : {
     name: 'Penguin',
     price: 5,
     quantity: 1,
     img: penguin,
-    id: uniqid(),
+    id: 12345,
   },
   item4 : {
     name: 'Toilet Paper',
     price: 10,
     quantity: 16,
     img: toiletPaper,
-    id: uniqid(),
+    id: 123455,
   },
 }
 

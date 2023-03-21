@@ -13,7 +13,7 @@ const ItemPage = ({productList}) => {
 
     const productChooser = () => {
         for (const item in productList) {
-            if(productList[item].id === itemId){
+            if(productList[item].id.toString() === itemId){
                 return productList[item]
             }
         }
