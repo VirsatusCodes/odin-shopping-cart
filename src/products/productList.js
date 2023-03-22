@@ -34,8 +34,8 @@ const productList = {
   },
   item4 : {
     name: 'Toilet Paper',
-    price: 10,
-    quantity: 16,
+    price: 0.50,
+    quantity: 1,
     img: toiletPaper,
     id: 123455,
   },
