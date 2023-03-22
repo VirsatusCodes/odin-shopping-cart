@@ -54,7 +54,7 @@ const onSubmit = () => {
     return (
         <BrowserRouter>
         <div className='App'>
-                <Nav />
+                <Nav cart = {cart}/>
             <Routes>
                 <Route path='/' element={<HomePage />} />
                 <Route path='/Catalogue' 

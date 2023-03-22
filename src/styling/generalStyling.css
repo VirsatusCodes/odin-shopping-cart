@@ -23,6 +23,15 @@ nav{
     font-size: 25px;
 }
 
+.cart > p{
+    color: white;
+    margin-left: 10px;
+}
+
+.cart{
+    display: flex;
+}
+
 .home-page-info {
     display: flex;
     align-items: center;

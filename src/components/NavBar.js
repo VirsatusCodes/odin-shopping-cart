@@ -1,10 +1,21 @@
 import {Link} from 'react-router-dom';
 import shoppingCart from '../svgImages/shoppingCart.svg'
 
-const Nav = () => {
+const Nav = ({
+    cart
+}) => {
 
     const navStyle = {
         color:'white'
+    }
+
+    const cartQuantityGetter = () => {
+        let cartQuantity = 0
+
+        cart.fullCart.map((itemOrder) => {
+            cartQuantity += itemOrder.quantity
+        })
+        return cartQuantity
     }
 
 
@@ -18,9 +29,12 @@ const Nav = () => {
                     <Link style={navStyle} to={'/Catalogue'}>
                         <li>Catalogue</li>
                     </Link>
-                    <Link to={'/Checkout'}>
-                        <img src={shoppingCart} alt={'shopping cart icon'}/>
-                    </Link>
+                    <div className='cart'>
+                        <Link to={'/Checkout'}>
+                            <img src={shoppingCart} alt={'shopping cart icon'}/>
+                        </Link>
+                            <p>{cartQuantityGetter()}</p>
+                    </div>
                 </ul>
             </nav>
         </div>
