@@ -3,7 +3,12 @@ import ReactDOM from "react-dom";
 import {useLocation} from "react-router-dom";
 import Items from '../components/Items'
 
-const ItemPage = ({productList}) => {
+const ItemPage = ({
+    productList,
+    onChange,
+    onSubmit,
+}) => {
+
     const pageUrl = useLocation();
 
     const findProductFromUrl = () => {
@@ -18,14 +23,17 @@ const ItemPage = ({productList}) => {
         return 'could not find your product'
     }
 
-    const buttonIncremeneter = () => {
-
+    const buttonIncremeneter = (e) => {
+        
     }
     /* make use of UseEffect here potentially?*/
 
     return (
         <div>
-            {<Items item = {findProductFromUrl()}/>}
+            {<Items item = {findProductFromUrl()}
+                    pageUrl = {pageUrl}
+                    onChange = {onChange}
+                    onSubmit = {onSubmit}/>}
         </div>
     )
 }

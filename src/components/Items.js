@@ -1,4 +1,8 @@
-const Items = ({item}) => {
+const Items = ({
+    item,
+    onChange,
+    onSubmit
+}) => {
 
 
 return (
@@ -13,11 +17,14 @@ return (
                 </h2>
                 <div className="purchase-quantity-selectors">
                 <button> {'<'} </button>
-                <input type={'number'} placeholder={'how many would you like?'}></input>
+                <input type={'number'} 
+                        placeholder={'how many would you like?'}
+                        onChange={onChange}
+                        data-value={item.id}></input>
                 <button> {'>'} </button>
                 </div>
                 
-                <button>Add to Cart</button>
+                <button onClick={onSubmit}>Add to Cart</button>
             </div>
         </div>
 )
