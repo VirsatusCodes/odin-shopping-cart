@@ -5,6 +5,8 @@ import Items from '../components/Items'
 
 const ItemPage = ({
     productList,
+    setCart,
+    cart,
     onChange,
     onSubmit,
 }) => {
@@ -23,17 +25,38 @@ const ItemPage = ({
         return 'could not find your product'
     }
 
-    const buttonIncremeneter = (e) => {
-        
+    const buttonIncrementer = (e) => {
+        const {dataset} = e.target
+
+        setCart({
+            ...cart,
+            item : {
+                id : dataset.value,
+                quantity : cart.item.quantity + 1,
+            }
+        })
     }
-    /* make use of UseEffect here potentially?*/
+
+    const buttonDecrementer = (e) => {
+        const {dataset} = e.target
+
+        setCart({
+            ...cart,
+            item : {
+                id : dataset.value,
+                quantity : cart.item.quantity - 1,
+            }
+        })
+    }
 
     return (
         <div>
             {<Items item = {findProductFromUrl()}
-                    pageUrl = {pageUrl}
                     onChange = {onChange}
-                    onSubmit = {onSubmit}/>}
+                    onSubmit = {onSubmit}
+                    cart = {cart}
+                    btnIncrementer = {buttonIncrementer}
+                    btnDecrementer = {buttonDecrementer}/>}
         </div>
     )
 }

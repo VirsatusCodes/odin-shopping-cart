@@ -1,7 +1,10 @@
 const Items = ({
     item,
     onChange,
-    onSubmit
+    onSubmit,
+    cart,
+    btnIncrementer,
+    btnDecrementer,
 }) => {
 
 
@@ -9,19 +12,22 @@ return (
     <div className="individual-item">
             <div className="item-left">
                 <h1>{item.name}</h1>
-                <img src={item.img}></img>
+                <img src={item.img} alt={'product'}></img>
             </div>
             <div className="item-right">
                 <h2>cost per {item.quantity} item <br/>
                 is ${item.price}
                 </h2>
+                <p>how many would you like?</p>
                 <div className="purchase-quantity-selectors">
-                <button> {'<'} </button>
-                <input type={'number'} 
-                        placeholder={'how many would you like?'}
+                <button onClick={btnDecrementer}
+                        data-value={item.id}> {'<'} </button>
+                <input type={'number'}
                         onChange={onChange}
-                        data-value={item.id}></input>
-                <button> {'>'} </button>
+                        data-value={item.id}
+                        value={cart.item.quantity}></input>
+                <button onClick={btnIncrementer}
+                        data-value={item.id}> {'>'} </button>
                 </div>
                 
                 <button onClick={onSubmit}>Add to Cart</button>

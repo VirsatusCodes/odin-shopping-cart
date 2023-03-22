@@ -83,3 +83,11 @@ li{
 margin-left: 90px;
 text-align: center;
 }
+
+.purchase-quantity-selectors{
+    margin-bottom: 20px;
+}
+
+.purchase-quantity-selectors > input{
+    max-width: 100px;
+}

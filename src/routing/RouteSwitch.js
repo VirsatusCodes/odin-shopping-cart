@@ -13,7 +13,7 @@ const [cart, setCart] = useState({
     fullCart : [],
     item : {
         id: '',
-        quantity: '',
+        quantity: 0,
   },
 })
 
@@ -27,7 +27,9 @@ const onChange = (e) => {
         ...cart,
         item : {
             id : dataset.value,
-            quantity : e.target.value,
+            quantity : Number(e.target.value),
+            /* without this when it gets the value from
+            the input it provides the value as a string */
         }
     })
     console.log(cart)
@@ -39,7 +41,7 @@ const onSubmit = () => {
         fullCart: cart.fullCart.concat(cart.item),
         item : {
             id: '',
-            quantity: '',
+            quantity: 0,
         }
     })
     console.log(cart)
@@ -55,12 +57,15 @@ const onSubmit = () => {
                 <Nav />
             <Routes>
                 <Route path='/' element={<HomePage />} />
-                <Route path='/Catalogue' element={<CataloguePage productList = {productList}/>} />
-                <Route path='/Catalogue/Item/:id' element={<ItemPage 
-                                                                    productList = {productList}
-                                                                    cart = {cart}
-                                                                    onChange = {onChange}
-                                                                    onSubmit = {onSubmit}/>}/>
+                <Route path='/Catalogue' 
+                element={<CataloguePage productList = {productList}/>} />
+                <Route path='/Catalogue/Item/:id' 
+                        element={<ItemPage 
+                                        productList = {productList}
+                                        setCart = {setCart}
+                                        cart = {cart}
+                                        onChange = {onChange}
+                                        onSubmit = {onSubmit}/>}/>
             </Routes>
             </div>
         </BrowserRouter>
