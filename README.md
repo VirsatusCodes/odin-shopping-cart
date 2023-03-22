@@ -10,3 +10,6 @@ converting to a string.
 (though it is reset to 0 when placing an order)
 
 -if screen gets too small website styling breaks in catalogue (probably all)
+
+-not sure if i want the nav icon cart to grow with quantity purchased
+or number of unique items purchased
