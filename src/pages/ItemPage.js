@@ -6,26 +6,26 @@ import Items from '../components/Items'
 const ItemPage = ({productList}) => {
     const pageUrl = useLocation();
 
-    const itemIdFinder = () => {
+    const findProductFromUrl = () => {
         const regEx = /(\w+)/g
-        return pageUrl.pathname.match(regEx)[2]
-      }
+        const itemId = pageUrl.pathname.match(regEx)[2]
 
-    const productChooser = () => {
         for (const item in productList) {
             if(productList[item].id.toString() === itemId){
                 return productList[item]
             }
         }
-    }; 
+        return 'could not find your product'
+    }
 
-    const itemId = itemIdFinder();
-    const product = productChooser();
+    const buttonIncremeneter = () => {
+
+    }
     /* make use of UseEffect here potentially?*/
 
     return (
         <div>
-            {<Items item = {product}/>}
+            {<Items item = {findProductFromUrl()}/>}
         </div>
     )
 }
