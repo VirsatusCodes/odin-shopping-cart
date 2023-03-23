@@ -113,6 +113,8 @@ text-align: center;
 .cart-breakdown{
     border: 5px solid burlywood;
     border-top: 0;
+    padding-left: 0px;
+    margin-top: 0px;
 }
 
 .checkout-info{
