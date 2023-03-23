@@ -1,5 +1,8 @@
 # odin-shopping-cart
 
+there are a slew of issues with efficiency and probably wanna move certain things around still,
+and need to alter code for readability as well, not to mention testing.
+
 current known bugs
 
 -when selecting amount of product to purchase initial value is
