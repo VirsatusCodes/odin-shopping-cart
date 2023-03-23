@@ -6,6 +6,7 @@ import Nav from '../components/NavBar'
 import HomePage from '../pages/HomePage';
 import CataloguePage from '../pages/CataloguePage'
 import ItemPage from '../pages/ItemPage.js';
+import CheckoutPage from '../pages/CheckoutPage.js';
 
 const RouteSwitch = () => {
 
@@ -56,16 +57,25 @@ const onSubmit = () => {
         <div className='App'>
                 <Nav cart = {cart}/>
             <Routes>
-                <Route path='/' element={<HomePage />} />
+                <Route path='/' 
+                        element={<HomePage />} />
+
                 <Route path='/Catalogue' 
-                element={<CataloguePage productList = {productList}/>} />
+                        element={<CataloguePage 
+                            productList = {productList}/>} />
+                    
+                <Route path='/Checkout' 
+                        element={<CheckoutPage 
+                            productList = {productList}
+                            cart = {cart}/>} />
+
                 <Route path='/Catalogue/Item/:id' 
                         element={<ItemPage 
-                                        productList = {productList}
-                                        setCart = {setCart}
-                                        cart = {cart}
-                                        onChange = {onChange}
-                                        onSubmit = {onSubmit}/>}/>
+                            productList = {productList}
+                            setCart = {setCart}
+                            cart = {cart}
+                            onChange = {onChange}
+                            onSubmit = {onSubmit}/>}/>
             </Routes>
             </div>
         </BrowserRouter>

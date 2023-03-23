@@ -100,3 +100,37 @@ text-align: center;
 .purchase-quantity-selectors > input{
     max-width: 100px;
 }
+
+.item-breakdown{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cart-breakdown, .cart-description{
+    width: 50vw;
+}
+
+.cart-breakdown{
+    border: 5px solid burlywood;
+    border-top: 0;
+}
+
+.checkout-info{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+}
+
+.cart-description{
+    margin-top: 10vh;
+    border: 5px solid burlywood;
+    display: flex;
+    justify-content: space-evenly;
+    border-bottom: 0;
+    text-decoration: underline black;
+    text-decoration-thickness: 2px;
+}
+
+.price-and-buy{
+margin-left: 30vw;
+}
