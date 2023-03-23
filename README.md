@@ -1,5 +1,16 @@
 # odin-shopping-cart
 
+Project Notes : there are a slew of problems still with this, the most important
+(because im currently unaware how to fix these issues) are the issues im having 
+with testing my app, there are a slew of problems and errors that constantly
+arise and with just my own sleuthing im having difficulties solving the problems,
+there are even no solutions in the top 20 that even have jest testing so i cant
+look through examples to extrapolate what im doing wrong, rather then spend the next
+day or so trying to figure out all the many issues i have I will instead move on for
+now and return in the future when i am revamping my projects for my portfolio.
+
+
+
 there are a slew of issues with efficiency and probably wanna move certain things around still,
 and need to alter code for readability as well, not to mention testing.
 

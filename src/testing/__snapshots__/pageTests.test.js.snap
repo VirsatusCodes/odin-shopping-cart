@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Catalogue testing renders a div w/correct info 1`] = `
+<DocumentFragment>
+  <div>
+    <ul
+      class="catalogue-of-items"
+    />
+  </div>
+</DocumentFragment>
+`;

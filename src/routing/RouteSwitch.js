@@ -47,11 +47,6 @@ const onSubmit = () => {
     })
     console.log(cart)
 }
-
-
-
-
-
     return (
         <BrowserRouter>
         <div className='App'>
