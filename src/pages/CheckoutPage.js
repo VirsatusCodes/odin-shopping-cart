@@ -16,11 +16,13 @@ const CheckoutPage = ({
                         name : productList[product].name,
                         quantity : item.quantity,
                         price : productList[product].price,
+                        id : productList[product].id
                     })
                 }
             }
         })
     }
+
     itemGetter();
     console.log(neededInfo)
 
@@ -45,11 +47,13 @@ return(
             <h3>price</h3>
         </div>
 
-        <div className="cart-breakdown">
+        <ul className="cart-breakdown">
             {neededInfo.map((item) => (
+                <li key={item.quantity}>
                 <CheckoutItemRender neededInfo={item}/>
+                </li>
             ))}
-        </div>
+        </ul>
         <div className="price-and-buy">
         <p className="purchase-total">Your Total is: ${totalPrice()}</p>
         <button>Buy Now!</button>
