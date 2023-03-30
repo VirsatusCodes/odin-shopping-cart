@@ -1,5 +1,11 @@
 import React from "react";
-import {render, screen, act, waitForElementToBeRemoved, waitFor} from "@testing-library/react";
+import {
+  render,
+  screen,
+  act,
+  waitForElementToBeRemoved,
+  waitFor,
+} from "@testing-library/react";
 import "@testing-library/jest-dom";
 import userEvent from "@testing-library/user-event";
 import HomePage from "../pages/HomePage";
@@ -8,55 +14,60 @@ import CheckoutPage from "../pages/CheckoutPage";
 import ItemPage from "../pages/ItemPage";
 import productList from "../products/productList";
 
-describe('HomePage testing', () => {
+describe("HomePage testing", () => {
+  it("renders greeting", () => {
+    render(
+      <HomePage />
+    ); /* one instance of render HomePage cant work for multiple tests apparently */
 
-    it('renders greeting', () => {
-        render(<HomePage />); /* one instance of render HomePage cant work for multiple tests apparently */
-        
-        expect(screen.getByRole('heading').textContent).toMatch(/Welcome to our store!/);
-    });
+    expect(screen.getByRole("heading").textContent).toMatch(
+      /Welcome to our store!/
+    );
+  });
 
-    it('renders mission statement', () => {
-        render(<HomePage />); 
-        
-        expect(screen.getByText(/Here/)).toBeInTheDocument();
-    })
+  it("renders mission statement", () => {
+    render(<HomePage />);
+
+    expect(screen.getByText(/Here/)).toBeInTheDocument();
+  });
 });
 
-    describe('ItemPage testing', () => {
+describe("ItemPage testing", () => {
+  const cart = {
+    fullCart: [
+      {
+        id: 12345,
+        quantity: 4,
+      },
+      {
+        id: "1234",
+        quantity: 6,
+      },
+    ],
+    item: {
+      id: "",
+      quantity: 0,
+    },
+  };
 
-        const cart = {
-            fullCart: [
-                {
-                    id: 12345,
-                    quantity: 4
-                },
-                {
-                    id: "1234",
-                    quantity: 6
-                }
-            ],
-            item: {
-                id: "",
-                quantity: 0
-            }
-        }
+  it("renders information", () => {
+    const setCartMock = jest.fn();
+    const onChangeMock = jest.fn();
+    const onSubmitMock = jest.fn();
 
-        it('renders information', () => {
-            const setCartMock = jest.fn()
-            const onChangeMock = jest.fn()
-            const onSubmitMock = jest.fn()
+    render(
+      <ItemPage
+        productList={productList}
+        setCart={setCartMock}
+        cart={cart}
+        onChange={onChangeMock}
+        onSubmit={onSubmitMock}
+      />
+    );
 
-            render(<ItemPage    productList = {productList}
-                        setCart = {setCartMock}
-                        cart = {cart}
-                        onChange = {onChangeMock}
-                        onSubmit = {onSubmitMock}/>);
-
-            expect(screen.getByText(/cost/)).toBeInTheDocument();
-        })
-
-    })
+    expect(screen.getByText(/cost/)).toBeInTheDocument();
+  });
+});
 
 /* describe('Catalogue testing', () => {
 
@@ -74,9 +85,6 @@ describe('HomePage testing', () => {
         
     })
 }) */
-
-
-
 
 /* describe('TestComponent Input', () => {
     it('calls onChange correct number of times', () => {
@@ -172,4 +180,3 @@ test('loading text is shown while API request is in progress', async () => {
 
 
  */
-

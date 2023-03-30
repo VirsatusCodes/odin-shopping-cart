@@ -1,138 +1,141 @@
-body{
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-    min-height: 100vh;
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
 }
 
-nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-width: 10vh;
-    background-color: rgb(51, 51, 236);
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-width: 10vh;
+  background-color: rgb(51, 51, 236);
 }
 
-.nav-links, a{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    list-style: none;
-    text-decoration: none;
-    font-size: 25px;
+.nav-links,
+a {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  text-decoration: none;
+  font-size: 25px;
 }
 
-.cart > p{
-    color: white;
-    margin-left: 10px;
+.cart > p {
+  color: white;
+  margin-left: 10px;
 }
 
-.cart{
-    display: flex;
+.cart {
+  display: flex;
 }
 
 .home-page-info {
-    display: flex;
-    align-items: center;
-    flex-flow: column;
-    margin-top: 10vh;
+  display: flex;
+  align-items: center;
+  flex-flow: column;
+  margin-top: 10vh;
 }
 
-.header{
-    font-size: 100px;
+.header {
+  font-size: 100px;
 }
 
-.mission-statement{
-    font-size: 40px;
-    line-height: 1.5;
+.mission-statement {
+  font-size: 40px;
+  line-height: 1.5;
 }
 
-img{
-    max-width: 500px;
-    max-height: 350px;
+img {
+  max-width: 500px;
+  max-height: 350px;
 }
 
-.catalogue-of-items{
-    display: flex;
-    justify-content: space-between;
+.catalogue-of-items {
+  display: flex;
+  justify-content: space-between;
 }
 
-li{
-    list-style-type: none;
+li {
+  list-style-type: none;
 }
 
-.item-description{
-    display: flex;
-    justify-content: center;
-    margin: 5px 0px 5px 0px;
-    text-align: center
+.item-description {
+  display: flex;
+  justify-content: center;
+  margin: 5px 0px 5px 0px;
+  text-align: center;
 }
 
 .catalogue-item > p {
-    color: black;
-    font-size: 20px;
+  color: black;
+  font-size: 20px;
 }
 
-.individual-item{
-    margin-top: 10vh ;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.individual-item {
+  margin-top: 10vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.item-left, .item-right{
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+.item-left,
+.item-right {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.item-right{
-margin-left: 90px;
-text-align: center;
+.item-right {
+  margin-left: 90px;
+  text-align: center;
 }
 
-.purchase-quantity-selectors{
-    margin-bottom: 20px;
+.purchase-quantity-selectors {
+  margin-bottom: 20px;
 }
 
-.purchase-quantity-selectors > input{
-    max-width: 100px;
+.purchase-quantity-selectors > input {
+  max-width: 100px;
 }
 
-.item-breakdown{
-    display: flex;
-    justify-content: space-evenly;
+.item-breakdown {
+  display: flex;
+  justify-content: space-evenly;
 }
 
-.cart-breakdown, .cart-description{
-    width: 50vw;
+.cart-breakdown,
+.cart-description {
+  width: 50vw;
 }
 
-.cart-breakdown{
-    border: 5px solid burlywood;
-    border-top: 0;
-    padding-left: 0px;
-    margin-top: 0px;
+.cart-breakdown {
+  border: 5px solid burlywood;
+  border-top: 0;
+  padding-left: 0px;
+  margin-top: 0px;
 }
 
-.checkout-info{
-    display: flex;
-    flex-flow: column;
-    align-items: center;
+.checkout-info {
+  display: flex;
+  flex-flow: column;
+  align-items: center;
 }
 
-.cart-description{
-    margin-top: 10vh;
-    border: 5px solid burlywood;
-    display: flex;
-    justify-content: space-evenly;
-    border-bottom: 0;
-    text-decoration: underline black;
-    text-decoration-thickness: 2px;
+.cart-description {
+  margin-top: 10vh;
+  border: 5px solid burlywood;
+  display: flex;
+  justify-content: space-evenly;
+  border-bottom: 0;
+  text-decoration: underline black;
+  text-decoration-thickness: 2px;
 }
 
-.price-and-buy{
-margin-left: 30vw;
+.price-and-buy {
+  margin-left: 30vw;
 }
